@@ -26,6 +26,7 @@
     "test": "standard",
     "bump": "gulp bump --part",
     "ci-build": "yarn build",
+    "ci-test": "echo \"No tests, sorry!\"",
     "ci-release-notes": "conventional-github-releaser -p eslint"
   },
   "keywords": [
