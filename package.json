@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
+    "dateformat": "^3.0.0",
     "jsome": "^2.3.25"
   },
   "peerDependencies": {

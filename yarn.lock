@@ -195,6 +195,10 @@ d@^0.1.1, d@~0.1.1:
   dependencies:
     es5-ext "~0.10.2"
 
+dateformat@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.0.tgz#a42a1ab816ff3170e238a3d7188f9aa3d287542a"
+
 debug-log@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debug-log/-/debug-log-1.0.1.tgz#2307632d4c04382b8df8a32f70b895046d52745f"

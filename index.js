@@ -1,6 +1,7 @@
 const { json } = require('micro')
 const chalk = require('chalk')
 const jsome = require('jsome')
+const dateFormat = require('dateformat')
 
 function logHeaders (prefix, requestIndex, opts, headers) {
   for (let h of opts.headers || []) {
@@ -9,6 +10,10 @@ function logHeaders (prefix, requestIndex, opts, headers) {
       console.log(`${prefix} #${requestIndex} Header ${chalk.bold(h)} ${v}`)
     }
   }
+}
+
+function formatTime (date) {
+    return dateFormat(date, "HH:MM:ss.l")
 }
 
 let requestCounter = 0
@@ -22,7 +27,7 @@ function visualize (fn, opts = 'dev') {
   return async function logRequest (req, res) {
     const start = new Date()
     const requestIndex = ++requestCounter
-    const dateString = `${chalk.grey(start.toLocaleTimeString())}`
+    const dateString = `${chalk.grey(formatTime(start))}`
     console.log(`${chalk.bold('>')} #${requestIndex} ${chalk.bold(req.method)} ${req.url}\t\t${dateString}`)
     logHeaders('>', requestIndex, opts, req.headers)
 
@@ -41,7 +46,7 @@ function visualize (fn, opts = 'dev') {
     res.once('finish', () => {
       const delta = new Date() - start
       const time = delta < 10000 ? `${delta}ms` : `${Math.round(delta / 1000)}s`
-      const endDateString = `${chalk.grey(new Date().toLocaleTimeString())}`
+      const endDateString = `${chalk.grey(formatTime(new Date()))}`
 
       console.log(`< #${requestIndex} ${chalk.bold(res.statusCode)} [+${time}]\t${endDateString}`)
       logHeaders('<', requestIndex, opts, res._headers)
