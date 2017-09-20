@@ -1,6 +1,6 @@
 {
   "name": "@textpress/micro-visualize",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Visualize requests in micro",
   "main": "./dist/index.js",
   "repository": "github:textpress/micro-visualize",
