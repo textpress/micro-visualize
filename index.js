@@ -49,7 +49,7 @@ function visualize (fn, opts = 'dev') {
       const endDateString = `${chalk.grey(formatTime(new Date()))}`
 
       console.log(`< #${requestIndex} ${chalk.bold(res.statusCode)} [+${time}]\t${endDateString}`)
-      logHeaders('<', requestIndex, opts, res._headers)
+      logHeaders('<', requestIndex, opts, res._headers || [])
 
       if (res._logBody) {
         jsome(res._logBody)
