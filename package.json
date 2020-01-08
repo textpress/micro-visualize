@@ -1,40 +1,40 @@
 {
-  "name": "@textpress/micro-visualize",
-  "version": "3.2.0",
-  "description": "Visualize requests in micro",
-  "main": "./dist/index.js",
-  "repository": "github:textpress/micro-visualize",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "dateformat": "^3.0.0",
-    "jsome": "^2.3.25"
-  },
-  "peerDependencies": {
-    "micro": "^7.1.0"
-  },
-  "devDependencies": {
-    "@textpress/gulp-bump-version": "^0.2.0",
-    "async-to-gen": "^1.3.0",
-    "conventional-github-releaser": "^1.1.12",
-    "gulp": "^3.9.1",
-    "standard": "^10.0.0"
-  },
-  "scripts": {
-    "prepublish": "npm run build",
-    "build": "mkdir -p dist && async-to-gen index.js > dist/index.js",
-    "test": "standard",
-    "bump": "gulp bump --part",
-    "ci-build": "yarn build",
-    "ci-test": "echo \"No tests, sorry!\"",
-    "ci-release-notes": "conventional-github-releaser -p eslint"
-  },
-  "keywords": [
-    "micro",
-    "service",
-    "microservice",
-    "zeit-micro",
-    "zeit",
-    "devtool"
-  ]
+    "name": "@textpress/micro-visualize",
+    "version": "3.2.0",
+    "description": "Visualize requests in micro",
+    "main": "./dist/index.js",
+    "repository": "github:textpress/micro-visualize",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^1.1.3",
+        "dateformat": "^3.0.0",
+        "jsome": "^2.3.25"
+    },
+    "peerDependencies": {
+        "micro": "^7.1.0"
+    },
+    "devDependencies": {
+        "@textpress/gulp-bump-version": ">=0.7.0",
+        "async-to-gen": "^1.3.0",
+        "conventional-github-releaser": "^1.1.12",
+        "gulp": "4.0.2",
+        "standard": "^10.0.0"
+    },
+    "scripts": {
+        "prepublish": "yarn build",
+        "build": "mkdir -p dist && async-to-gen index.js > dist/index.js",
+        "test": "standard",
+        "bump": "gulp bump --part",
+        "ci-build": "yarn build",
+        "ci-test": "echo \"No tests, sorry!\"",
+        "ci-release-notes": "conventional-github-releaser -p eslint"
+    },
+    "keywords": [
+        "micro",
+        "service",
+        "microservice",
+        "zeit-micro",
+        "zeit",
+        "devtool"
+    ]
 }
