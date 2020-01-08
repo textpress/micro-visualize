@@ -6,7 +6,7 @@
     "repository": "github:textpress/micro-visualize",
     "license": "MIT",
     "dependencies": {
-        "chalk": "^1.1.3",
+        "chalk": "^2.3.2",
         "dateformat": "^3.0.0",
         "jsome": "^2.3.25"
     },
@@ -16,8 +16,12 @@
     "devDependencies": {
         "@textpress/gulp-bump-version": ">=0.7.0",
         "async-to-gen": "^1.3.0",
+        "chalk": "^2.3.2",
         "conventional-github-releaser": "^1.1.12",
         "gulp": "4.0.2",
+        "gulp-confirm": "1.0.8",
+        "gulp-exec": "4.0.0",
+        "gulp-print": "5.0.2",
         "standard": "^10.0.0"
     },
     "scripts": {
